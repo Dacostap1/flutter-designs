@@ -10,6 +10,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   final _items = [
     Item(title: 'Primer diseño', route: 'first-design'),
+    Item(title: 'BackgroundImage and PageView', route: 'second-design'),
   ];
 
   @override

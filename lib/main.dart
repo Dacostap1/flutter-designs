@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:designs/presentation/pages/list.dart';
 import 'package:designs/presentation/pages/design/first_design.dart';
+import 'package:designs/presentation/pages/design/second_design.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,11 +21,20 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           button: TextStyle(color: Colors.blue),
         ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.blue,
+            primary: Colors.white,
+            fixedSize: const Size(150, 40),
+            shape: const StadiumBorder(),
+          ),
+        ),
       ),
       initialRoute: 'main-page',
       routes: {
         'main-page': (_) => const MainPage(),
         'first-design': (_) => const FirstDesign(),
+        'second-design': (_) => const SecondDesign(),
       },
     );
   }
