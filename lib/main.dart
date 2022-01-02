@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:designs/presentation/pages/list.dart';
 import 'package:designs/presentation/pages/design/first_design.dart';
 import 'package:designs/presentation/pages/design/second_design.dart';
+import 'package:designs/presentation/pages/design/third_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         'main-page': (_) => const MainPage(),
         'first-design': (_) => const FirstDesign(),
         'second-design': (_) => const SecondDesign(),
+        'third-design': (_) => const ThirdDesign(),
       },
     );
   }
