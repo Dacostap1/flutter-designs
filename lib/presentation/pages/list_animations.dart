@@ -1,24 +1,33 @@
 import 'package:flutter/material.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+class AnimationsPage extends StatefulWidget {
+  const AnimationsPage({Key? key}) : super(key: key);
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<AnimationsPage> createState() => _AnimationsPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _AnimationsPageState extends State<AnimationsPage> {
   final _items = [
-    Item(title: 'Primer diseño', route: 'first-design'),
-    Item(title: 'BackgroundImage and PageView', route: 'second-design'),
-    Item(title: 'Stack, Transform, Wrap and Blur', route: 'third-design')
+    //Implicits
+    Item(title: 'AnimatedFoo', route: 'animated-foo'),
+    Item(title: 'Tween Animation', route: 'tween-animation'),
+
+    //Explicits
+    Item(title: 'FooTransition(Basic)', route: 'foo-transition'),
+    Item(title: 'FooTransition(use Scale)', route: 'foo-transition-scale'),
+    Item(title: 'AnimatedWidget', route: 'animated-widget'),
+    Item(
+        title: 'AnimatedWidget with two Tweens',
+        route: 'animated-widget-two-tweens'),
+    Item(title: 'AnimatedBuilder', route: 'animated-builder')
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mis diseños'),
+        title: const Text('Mis animaciones'),
         centerTitle: true,
       ),
       body: ListView.builder(
